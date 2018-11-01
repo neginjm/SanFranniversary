@@ -1,0 +1,268 @@
+
+/* ==========================================================================
+   Base styles:
+   ========================================================================== */
+   /* Fix to include padding and border in the total width for each element */
+   * {
+   	box-sizing: border-box;
+   }
+
+   /* Fix for responsive images */
+   img {
+   	max-width: 100%;
+   }
+
+   body{
+   	font-family: 'Open Sans', sans-serif;
+    /*-webkit-font-smoothing: antialiased;*/
+   	text-align: center;
+   	margin: 0;
+   	color: #4A4A4A;
+   }
+
+   header {
+   	background: #D12F19;
+   	color: #262626;
+   	padding: 10px 0px 50px 0px;
+   	margin-bottom: 40px;
+   }
+
+   h1 {
+   	font-family: 'Oswald', sans-serif;
+    -webkit-font-smoothing: antialiased;
+   	font-weight: 700;
+   	text-transform: uppercase;
+   	font-size: 48px;
+   	margin-bottom: 20px;
+   }
+
+   h2 {
+   	font-family: 'Karla', sans-serif;
+    -webkit-font-smoothing: antialiased;
+   	font-size: 22px;
+   	text-transform: uppercase;
+   }
+
+   h3 {
+   	font-family: 'Karla', sans-serif;
+    /*-webkit-font-smoothing: antialiased;*/
+   	font-size: 18px;
+   }
+
+   h4 {
+   	font-size: 13px;
+   	margin: 6px;
+   	/*font-weight: normal;*/
+   }
+
+   h5 {
+   	font-size: 13px;
+   	margin: 6px;
+   	font-weight: lighter;
+   }
+
+   p {
+   	font-size: 16px;
+   	margin: 0px;
+   }
+
+   a {
+   	color: #F4F5F5;
+   	font-weight: bold;
+   	text-decoration: none;
+   }
+
+   a:hover {
+   	text-decoration: underline;
+   }
+
+   .bridge {
+    width: 220px;
+    height: 220px;
+   	margin: 50px;
+    /*animation: floating 2.5s ease infinite;*/
+   }
+
+   .foggy-cloud {
+    /*animation: floating 2.5s ease infinite;*/
+   }
+
+   .weather {
+   	display: flex;
+   	justify-content: center;
+   	flex-direction: row;
+   	flex-wrap: wrap;
+   	/*align-items: center;*/
+   	/*width: 14.2857143%;*/
+   	/*padding: 0px 10px 0px 10px;*/
+   }
+
+   figure {
+   	margin: 0px 10px 15px 10px;
+   }
+
+   figure img {
+    width: 140px;
+    height: 99px;
+   }
+
+   .weather img {
+   	/*flex: box;*/
+   	/*margin: 20px 10px 10px 10px;*/
+  	/*position: relative;
+  	bottom: -310px;*/
+  	/*position: absolute;*/
+    }
+
+   .captions {
+	 /*text-align: center;*/
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 /*padding: 0px 20px 0px 20px;*/
+	 /*display: inline-block;*/
+	 /*position: relative;*/
+   }
+
+  .captions ul {
+  	margin: 0px 30px 30px 30px;
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .ticket {
+    margin: 15px 0px;
+    width: 170px;
+    height: 120px;
+  }
+
+  .background-overlay {
+    background-color: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .modal-content {
+    padding: 40px 20px;
+    /*color: #444;*/
+    background: #FFFFFF;
+    /*border: 1px solid #4A4A4A;*/
+    border-radius: 8px;
+    position: relative;
+    /*width: 60%;*/
+  }
+
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    position: fixed;
+    transform: translateY(-100%);
+    opacity: 0;  
+
+    transition: all 0.5s ease-in-out;
+
+    z-index: 1;
+  }
+
+  .open-modal {
+    overflow-y: hidden;
+  }
+
+  .open-modal .modal {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  footer {
+  	background: #D12F19;
+  	color: #262626;
+  	padding: 20px 20px;
+  	margin-top: 50px;
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: space-between;
+  	align-items: center;
+  	flex-wrap: wrap;
+  }
+
+  footer a i {
+  	font-size: 18px;
+  	color: #262626;
+  	margin: 6px;
+  	/*padding: 20px 0px 20px 0px;*/
+  }
+
+  footer a:hover {
+  	text-decoration: none;
+  }
+
+  .intro {
+    /*display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;*/
+  	/*padding-right: 10px;
+  	padding-left: 10px;*/
+  	width: 58%;
+  	margin: auto;
+  }
+
+  @keyframes floating {
+   0% {
+     transform: translateY(5px);
+   }
+   50% {
+     transform: translateY(15px);
+   }
+   100% {
+     transform: translateY(5px);
+   }
+  }
+
+
+  @media screen and (max-width: 960px) {
+   .intro {
+      width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 660px) {
+   .intro {
+      width: 85%;
+    }
+  }
+
+
+  @media screen and (max-width: 450px) {
+  	h1 {
+     	font-size: 42px;
+     }
+
+      h2 {
+    
+     }
+
+   .intro {
+      width: 90%;
+    }
+
+    .footer-items {
+      width: 100%;
+    }
+  }
+
+
