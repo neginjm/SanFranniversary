@@ -37,63 +37,6 @@ console.log('File Loading!!!');
 // 2.8 Typical: Resets the bridge back to the default mode (clouds and waves moving and birds flying, "optional sound effect")
 
 
-
-
-
-//Drag & Drop
-
- // $( function() {
- //    $( "#draggable" ).draggable();
- //    $( "#droppable" ).droppable({
- //      drop: function( event, ui ) {
- //        $( this )
- //          .addClass( "ui-state-highlight" )
- //          .find( "p" )
- //          .html( "Dropped!" );
- //      }
- //    });
- //  } );
-
-// $( ".sunny" ).on( "dragover", function( event, ui ) {
-// 	$('img').show();
-// } );
-
-// $( ".foggy" ).on( "drag", function( event, ui ) {
-// 	$('img').fadeIn();
-// } );
-
-// $( ".windy" ).on( "drag", function( event, ui ) {
-// 	$('img').fadeIn();
-// } );
-
-// $( ".rainy" ).on( "drag", function( event, ui ) {
-// 	$('img').fadeIn();
-// } );
-
-// $( ".romantic" ).on( "drag", function( event, ui ) {
-// 	$('img').fadeIn();
-// } );
-
-// $( ".snowy" ).on( "drag", function( event, ui ) {
-// 	$('img').fadeIn();
-// } );
-
-// $( ".typical" ).on( "drag", function( event, ui ) {
-// 	$('img').fadeIn();
-// } );
-
-// $(function(){
-// $( ".draggable" ).droppable({
-// drop: function( event, ui ) {
-
-
-// if (ui.draggable.attr('class') == 'sunny') {
-// 	$(this).attr('src', 'img/sunny-bridge.svg');
-// });
-
-// } else if ()
-
-
 $( function() {
 
 	// Defining Sunny Sound
@@ -112,19 +55,19 @@ $( function() {
 	var windSound = document.createElement('audio');
 	windSound.controls = true;
 	windSound.loop = true;
-	windSound.src = 'audio/medium-wind.mp4';
+	windSound.src = 'audio/medium-wind.wav';
 
 	// Defining Rainy Sound
 	var rainSound = document.createElement('audio');
 	rainSound.controls = true;
 	rainSound.loop = true;
-	rainSound.src = 'audio/seagulls-rain-thunder.mp4';
+	rainSound.src = 'audio/seagulls-rain-thunder.wav';
 
 	// Defining Romantic Sound
 	var sinatra = document.createElement('audio');
 	sinatra.controls = true;
 	sinatra.loop = true;
-	sinatra.src = 'audio/strangers-in-the-night.mp4';
+	sinatra.src = 'audio/strangers-in-the-night.m4a';
 	
 	// Defining Snowy Sound
 	var alertSound = document.createElement('audio');
@@ -135,7 +78,7 @@ $( function() {
 	var bartSound = document.createElement('audio');
 	bartSound.controls = true;
 	bartSound.loop = true;
-	bartSound.src = 'audio/bart-train-arriving.mp4';
+	bartSound.src = 'audio/bart-train-arriving.wav';
 
 	alertSound.addEventListener('ended', function(){
 				setTimeout(function(){
@@ -149,17 +92,17 @@ $( function() {
 	var typicalSound = document.createElement('audio');
 	typicalSound.controls = true;
 	typicalSound.loop = !true;
-	typicalSound.src = 'audio/short-foghorn.mp4';
+	typicalSound.src = 'audio/short-foghorn.wav';
 
 	var cablecarSound = document.createElement('audio');
 	cablecarSound.controls = true;
 	cablecarSound.loop = !true;
-	cablecarSound.src = 'audio/cable-car-leaving-stop.mp4';
+	cablecarSound.src = 'audio/cable-car-leaving-stop.wav';
 
 	var lightwindSound = document.createElement('audio');
 	lightwindSound.controls = true;
 	lightwindSound.loop = true;
-	lightwindSound.src = 'audio/light-wind.mp4';
+	lightwindSound.src = 'audio/light-wind.wav';
 
 	typicalSound.addEventListener('ended', function(){
     			cablecarSound.play();
@@ -178,9 +121,6 @@ $( function() {
 	// Drop
 	$( "#droppable" ).droppable({
 		drop: function( event, ui ) {
-			// $( this ).addClass( "ui-state-highlight" );
-
-			// console.log(ui.draggable);
 
 			console.log('event ', event);
 
@@ -210,7 +150,6 @@ $( function() {
 			} else if (ui.draggable.hasClass('foggy') ) {
 
 				$(this).attr('src', 'img/foggy-bridge.svg');
-				// .addClass( "foggy-bridge");
 
 				sunnySound.pause();
 				windSound.pause();
@@ -304,7 +243,6 @@ $( function() {
 				alertSound.currentTime = 0;
 				bartSound.currentTime = 0;
 
-
 			} else {
 				$(this).attr('src', 'img/typical-bridge.svg');
 
@@ -326,25 +264,3 @@ $( function() {
 	});
 });
 
-
-// $( function(event, ui) {
-
-
-// 	if( $(this).attr('scr') == 'img/sunny-bridge.svg') {
-
-// 		$(this).attr('src', 'img/sunny-bridge.svg');
-// 	} else if ($(this).attr('src') == '') {
-// 		$(this).attr('src', 'img/foggy-bridge.svg');
-// 	} else if ($(this).attr('src') == '') {
-// 		$(this).attr('src', 'img/windy-bridge.svg');
-// 	} else if ($(this).attr('src') == '') {
-// 		$(this).attr('src', 'img/rainy-bridge.svg');
-// 	} else if ($(this).attr('src') == '') {
-// 		$(this).attr('src', 'img/romantic-bridge.svg');
-// 	} else if ($(this).attr('src') == '') {
-// 		$(this).attr('src', 'img/snowy-bridge.svg');
-// 	} else if ($(this).attr('src') == '') {
-// 		$(this).attr('src', 'img/typical-bridge.svg');
-// 	}
-
-// });

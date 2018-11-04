@@ -92,9 +92,6 @@
    	justify-content: center;
    	flex-direction: row;
    	flex-wrap: wrap;
-   	/*align-items: center;*/
-   	/*width: 14.2857143%;*/
-   	/*padding: 0px 10px 0px 10px;*/
    }
 
    figure {
@@ -106,27 +103,15 @@
     height: 99px;
    }
 
-   .weather img {
-   	/*flex: box;*/
-   	/*margin: 20px 10px 10px 10px;*/
-  	/*position: relative;
-  	bottom: -310px;*/
-  	/*position: absolute;*/
-    }
-
-   .captions {
-	 /*text-align: center;*/
+   /*.captions {
 	 display: flex;
 	 justify-content: center;
 	 align-items: center;
-	 /*padding: 0px 20px 0px 20px;*/
-	 /*display: inline-block;*/
-	 /*position: relative;*/
    }
 
   .captions ul {
   	margin: 0px 30px 30px 30px;
-  }
+  }*/
 
   .close-icon {
     position: absolute;
@@ -204,7 +189,6 @@
   	font-size: 18px;
   	color: #262626;
   	margin: 6px;
-  	/*padding: 20px 0px 20px 0px;*/
   }
 
   footer a:hover {
@@ -212,11 +196,6 @@
   }
 
   .intro {
-    /*display: flex;
-  	flex-wrap: wrap;
-  	justify-content: center;*/
-  	/*padding-right: 10px;
-  	padding-left: 10px;*/
   	width: 58%;
   	margin: auto;
   }
@@ -250,10 +229,6 @@
   @media screen and (max-width: 450px) {
   	h1 {
      	font-size: 42px;
-     }
-
-      h2 {
-    
      }
 
    .intro {
